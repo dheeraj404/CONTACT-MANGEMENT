@@ -32,7 +32,7 @@ The **Contact Management Application** is a full-stack web application designed 
 
 ## Demo
 
-[Live Demo Link]([https://your-deployed-app-link.com](https://contact-mangement-60j0gb4ed-dheeraj-mauryas-projects.vercel.app/))
+[Live Demo Link]([https://contact-mangement-60j0gb4ed-dheeraj-mauryas-projects.vercel.app/])
 
 ![Application Screenshot](./screenshots/app_screenshot.png)
 
