@@ -1,14 +1,13 @@
-// src/components/ContactForm.jsx
-import React, { useState, useEffect } from 'react';
-import { TextField, Button, Grid, Box } from '@mui/material';
+import { TextField, Button, Grid, Box } from "@mui/material";
+import React, { useState, useEffect } from "react";
 
 const initialFormState = {
-  firstName: '',
-  lastName: '',
-  email: '',
-  phoneNumber: '',
-  company: '',
-  jobTitle: '',
+  firstName: "",
+  lastName: "",
+  email: "",
+  phoneNumber: "",
+  company: "",
+  jobTitle: "",
 };
 
 const ContactForm = ({ onAdd, onCancel, contact = null }) => {
@@ -18,38 +17,35 @@ const ContactForm = ({ onAdd, onCancel, contact = null }) => {
   useEffect(() => {
     if (contact) {
       setForm({
-        firstName: contact.firstName || '',
-        lastName: contact.lastName || '',
-        email: contact.email || '',
-        phoneNumber: contact.phoneNumber || '',
-        company: contact.company || '',
-        jobTitle: contact.jobTitle || '',
+        firstName: contact.firstName || "",
+        lastName: contact.lastName || "",
+        email: contact.email || "",
+        phoneNumber: contact.phoneNumber || "",
+        company: contact.company || "",
+        jobTitle: contact.jobTitle || "",
       });
     }
   }, [contact]);
 
-  // Validate form fields
   const validate = () => {
     const temp = {};
-    temp.firstName = form.firstName ? '' : 'First Name is required';
-    temp.lastName = form.lastName ? '' : 'Last Name is required';
-    temp.email = /^\S+@\S+\.\S+$/.test(form.email) ? '' : 'Email is not valid';
+    temp.firstName = form.firstName ? "" : "First Name is required";
+    temp.lastName = form.lastName ? "" : "Last Name is required";
+    temp.email = /^\S+@\S+\.\S+$/.test(form.email) ? "" : "Email is not valid";
     temp.phoneNumber = /^\+?[1-9]\d{1,14}$/.test(form.phoneNumber)
-      ? ''
-      : 'Phone Number is not valid';
-    temp.company = form.company ? '' : 'Company is required';
-    temp.jobTitle = form.jobTitle ? '' : 'Job Title is required';
+      ? ""
+      : "Phone Number is not valid";
+    temp.company = form.company ? "" : "Company is required";
+    temp.jobTitle = form.jobTitle ? "" : "Job Title is required";
     setErrors({ ...temp });
-    return Object.values(temp).every((x) => x === '');
+    return Object.values(temp).every((x) => x === "");
   };
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
@@ -61,7 +57,6 @@ const ContactForm = ({ onAdd, onCancel, contact = null }) => {
   return (
     <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
       <Grid container spacing={2}>
-        {/* First Name */}
         <Grid item xs={12} sm={6}>
           <TextField
             name="firstName"
@@ -74,7 +69,6 @@ const ContactForm = ({ onAdd, onCancel, contact = null }) => {
           />
         </Grid>
 
-        {/* Last Name */}
         <Grid item xs={12} sm={6}>
           <TextField
             name="lastName"
@@ -101,7 +95,6 @@ const ContactForm = ({ onAdd, onCancel, contact = null }) => {
           />
         </Grid>
 
-        {/* Phone Number */}
         <Grid item xs={12} sm={6}>
           <TextField
             name="phoneNumber"
@@ -127,7 +120,6 @@ const ContactForm = ({ onAdd, onCancel, contact = null }) => {
           />
         </Grid>
 
-        {/* Job Title */}
         <Grid item xs={12} sm={6}>
           <TextField
             name="jobTitle"
@@ -140,7 +132,6 @@ const ContactForm = ({ onAdd, onCancel, contact = null }) => {
           />
         </Grid>
 
-        {/* Action Buttons */}
         <Grid item xs={12} display="flex" justifyContent="flex-end">
           {onCancel && (
             <Button onClick={onCancel} color="secondary" sx={{ mr: 2 }}>
@@ -148,7 +139,7 @@ const ContactForm = ({ onAdd, onCancel, contact = null }) => {
             </Button>
           )}
           <Button type="submit" variant="contained" color="primary">
-            {contact ? 'Update Contact' : 'Add Contact'}
+            {contact ? "Update Contact" : "Add Contact"}
           </Button>
         </Grid>
       </Grid>
@@ -157,4 +148,3 @@ const ContactForm = ({ onAdd, onCancel, contact = null }) => {
 };
 
 export default ContactForm;
-

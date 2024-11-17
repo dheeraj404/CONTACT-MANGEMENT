@@ -1,27 +1,24 @@
-// src/components/SearchBar.jsx
-import React, { useState } from 'react';
-import { TextField, Button, Grid, Paper } from '@mui/material';
+import { TextField, Button, Grid, Paper } from "@mui/material";
+import React, { useState } from "react";
 
 const SearchBar = ({ onSearch }) => {
   const [search, setSearch] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    company: '',
-    jobTitle: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    company: "",
+    jobTitle: "",
   });
 
-  // Handle input changes
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setSearch({ ...search, [name]: value });
   };
 
-  // Handle search submission
   const handleSearch = () => {
     const params = {};
-    Object.keys(search).forEach(key => {
+    Object.keys(search).forEach((key) => {
       if (search[key]) {
         params[key] = search[key];
       }
@@ -29,17 +26,16 @@ const SearchBar = ({ onSearch }) => {
     onSearch(params);
   };
 
-  // Handle reset
   const handleReset = () => {
     setSearch({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phoneNumber: '',
-      company: '',
-      jobTitle: '',
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      company: "",
+      jobTitle: "",
     });
-    onSearch({}); // Fetch all contacts
+    onSearch({});
   };
 
   return (
@@ -113,14 +109,24 @@ const SearchBar = ({ onSearch }) => {
 
         {/* Search Button */}
         <Grid item xs={12} sm={6} md={2}>
-          <Button variant="contained" color="primary" onClick={handleSearch} fullWidth>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleSearch}
+            fullWidth
+          >
             Search
           </Button>
         </Grid>
 
         {/* Reset Button */}
         <Grid item xs={12} sm={6} md={2}>
-          <Button variant="outlined" color="secondary" onClick={handleReset} fullWidth>
+          <Button
+            variant="outlined"
+            color="secondary"
+            onClick={handleReset}
+            fullWidth
+          >
             Reset
           </Button>
         </Grid>

@@ -1,8 +1,7 @@
-// src/components/AddContactButton.jsx
-import React, { useState } from 'react';
-import { Button, Dialog, DialogTitle, DialogContent } from '@mui/material';
-import { Add } from '@mui/icons-material';
-import ContactForm from './ContactForm';
+import ContactForm from "./ContactForm";
+import { Add } from "@mui/icons-material";
+import { Button, Dialog, DialogTitle, DialogContent } from "@mui/material";
+import React, { useState } from "react";
 
 const AddContactButton = ({ onAdd }) => {
   const [open, setOpen] = useState(false);
@@ -29,13 +28,13 @@ const AddContactButton = ({ onAdd }) => {
         onClick={handleOpen}
         sx={{
           mb: 2,
-          background: 'rgba(255, 255, 255, 0.25)',
-          backdropFilter: 'blur(10px)',
-          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-          border: '1px solid rgba(255, 255, 255, 0.3)',
-          color: 'text.primary',
-          '&:hover': {
-            background: 'rgba(255, 255, 255, 0.35)',
+          background: "rgba(255, 255, 255, 0.25)",
+          backdropFilter: "blur(10px)",
+          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+          border: "1px solid rgba(255, 255, 255, 0.3)",
+          color: "text.primary",
+          "&:hover": {
+            background: "rgba(255, 255, 255, 0.35)",
           },
         }}
       >

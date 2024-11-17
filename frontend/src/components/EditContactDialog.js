@@ -1,7 +1,12 @@
-// src/components/EditContactDialog.jsx
-import React from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
-import ContactForm from './ContactForm';
+import ContactForm from "./ContactForm";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
+} from "@mui/material";
+import React from "react";
 
 const EditContactDialog = ({ contact, onClose, onUpdate }) => {
   const handleUpdate = (updatedContact) => {
@@ -13,11 +18,13 @@ const EditContactDialog = ({ contact, onClose, onUpdate }) => {
     <Dialog open={Boolean(contact)} onClose={onClose} fullWidth maxWidth="sm">
       <DialogTitle>Edit Contact</DialogTitle>
       <DialogContent>
-        <ContactForm contact={contact} onAdd={handleUpdate} onCancel={onClose} />
+        <ContactForm
+          contact={contact}
+          onAdd={handleUpdate}
+          onCancel={onClose}
+        />
       </DialogContent>
-      <DialogActions>
-        {/* The Cancel and Save buttons are now part of ContactForm */}
-      </DialogActions>
+      <DialogActions></DialogActions>
     </Dialog>
   );
 };

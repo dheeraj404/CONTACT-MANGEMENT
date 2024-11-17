@@ -1,10 +1,9 @@
-// src/services/api.js
-import axios from 'axios';
+import axios from "axios";
 
 const api = axios.create({
-  baseURL: 'https://contact-mangement-1sse.onrender.com', // Replace with your backend URL
+  baseURL: "https://contact-mangement-1sse.onrender.com",
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
