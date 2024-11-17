@@ -32,9 +32,8 @@ The **Contact Management Application** is a full-stack web application designed 
 
 ## Demo
 
-[Live Demo Link]([https://contact-mangement-60j0gb4ed-dheeraj-mauryas-projects.vercel.app/])
+[Live Demo Link](https://contact-mangement-60j0gb4ed-dheeraj-mauryas-projects.vercel.app/)
 
-![Application Screenshot](./screenshots/app_screenshot.png)
 
 
 
@@ -92,7 +91,7 @@ Ensure you have the following installed on your machine:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/contact-management-app.git
+   git clone https://github.com/dheeraj404/CONTACT-MANGEMENT
    cd contact-management-app/backend
    ```
 
