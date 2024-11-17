@@ -194,6 +194,6 @@ For any questions, feedback, or contributions, please contact:
 - **Name:** Dheeraj Kumar Maurya
 - **Email:** dheeraj07maurya@gmail.com
 - **GitHub:** [dheeraj404](https://github.com/dheeraj404)
-- **LinkedIn:** [Your LinkedIn](https://www.linkedin.com/in/Dheeraj0/)
+- **LinkedIn:** [Dheeraj0](https://www.linkedin.com/in/Dheeraj0/)
 
 ---
