@@ -193,7 +193,7 @@ For any questions, feedback, or contributions, please contact:
 
 - **Name:** Dheeraj Kumar Maurya
 - **Email:** dheeraj07maurya@gmail.com
-- **GitHub:** [yourusername](https://github.com/dheeraj202)
+- **GitHub:** [dheeraj404](https://github.com/dheeraj404)
 - **LinkedIn:** [Your LinkedIn](https://www.linkedin.com/in/Dheeraj0/)
 
 ---
